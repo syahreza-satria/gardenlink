@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { profile, links, social } from "@/app/src/data";
 import LinkCard from "@/app/components/LinkCard";
-import { FaCircleCheck, FaInstagram } from "react-icons/fa6";
+import { FaCircleCheck } from "react-icons/fa6";
 import ShinyText from "@/components/ShinyText";
 import Social from "./components/Social";
 import LiquidEther from "@/components/LiquidEther";
@@ -22,16 +22,13 @@ export default function Home() {
           iterationsViscous={32}
           iterationsPoisson={32}
           resolution={0.5}
-          isBounce={false}
+          isBounce={true}
           autoDemo
-          autoSpeed={0.5}
+          autoSpeed={1.5}
           autoIntensity={2.2}
           takeoverDuration={0.25}
-          autoResumeDelay={3000}
+          autoResumeDelay={1000}
           autoRampDuration={0.6}
-          color0="#5227FF"
-          color1="#FF9FFC"
-          color2="#B19EEF"
           style={{ width: "100%", height: "100%" }} // Memastikan full screen
         />
       </div>
@@ -40,9 +37,6 @@ export default function Home() {
       {/* Tambahkan 'relative' dan 'z-10' agar konten berada di atas background */}
       <div className="relative z-10 p-4">
         <div className="max-w-xl mx-auto space-y-8 pt-8">
-          {" "}
-          {/* Tambahan pt-8 agar tidak terlalu mepet atas */}
-          {/* Header */}
           <div className="max-w-xl mx-auto text-center space-y-4 flex flex-col items-center">
             <Image
               src={profile.avatar}
@@ -78,11 +72,7 @@ export default function Home() {
                 className="font-bold text-sm"
               />
 
-              <p className="text-gray-300 text-md drop-shadow-md">
-                {" "}
-                {/* Ubah warna teks agar kontras dengan background */}
-                {profile.bio}
-              </p>
+              <p className="text-gray-300 text-sm md:text-md drop-shadow-md">{profile.bio}</p>
             </div>
           </div>
           <hr className="border-gray-700" /> {/* Gelapkan border HR */}
