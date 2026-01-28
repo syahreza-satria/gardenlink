@@ -53,16 +53,16 @@ export default function Home() {
               <p className="text-gray-300 text-sm sm:text-base px-0 sm:px-8 drop-shadow-md">{profile.bio}</p>
             </div>
           </div>
-          <hr className="border-gray-700" />
+          <hr className="border-gray-800" />
           {/* Main Links */}
           <div className="flex flex-col gap-4">
             {links.map((link, index) => (
               <LinkCard key={index} title={link.title} url={link.url} icon={link.icon} />
             ))}
           </div>
-          <hr className="border-gray-700" />
+          <hr className="border-gray-800" />
           {/* Footer */}
-          <footer className="text-center text-sm text-gray-500 font-extralight pb-8">©2026 Copyright Syahreza Satria</footer>
+          <footer className="text-center text-sm font-extralight pb-8">©2026 Copyright Syahreza Satria</footer>
         </div>
       </div>
     </main>
