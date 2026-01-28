@@ -36,6 +36,11 @@ export const social = [
     icon: IoIosMail,
   },
   {
+    platform: "Github",
+    url: "https://github.com/syahreza-satria",
+    icon: FaGithub,
+  },
+  {
     platform: "Tiktok",
     url: "https://www.tiktok.com/@syahrezasatria",
     icon: FaTiktok,
