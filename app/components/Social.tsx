@@ -9,7 +9,7 @@ interface SocialProps {
 const Social: React.FC<SocialProps> = ({ platform, url, icon: Icon }) => {
   return (
     <a href={url} title={platform} target="_blank">
-      <Icon className="size-7 text-gray-300 hover:scale-125 trasnsition-all duration-300" />
+      <Icon className="size-7 text-gray-300 hover:scale-105 trasnsition-all duration-300" />
     </a>
   );
 };

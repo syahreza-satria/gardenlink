@@ -3,14 +3,17 @@
 import Image from "next/image";
 import { profile, links, social } from "@/app/src/data";
 import LinkCard from "@/app/components/LinkCard";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaCircleCheck, FaShare } from "react-icons/fa6";
 import ShinyText from "@/components/ShinyText";
 import Social from "./components/Social";
 import LiquidEther from "@/components/LiquidEther";
+import Footer from "./components/Footer";
+import ShareButton from "./components/ShareButton";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <LiquidEther
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
@@ -32,10 +35,14 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 p-4">
-        <div className="max-w-xl mx-auto space-y-8 pt-8">
+      {/* Main */}
+      <div className="relative z-10 p-4 max-w-xl mx-auto py-4">
+        <div className="flex justify-end">
+          <ShareButton />
+        </div>
+        <div className="max-w-xl mx-auto space-y-8 pt-4">
           <div className="max-w-xl mx-auto text-center space-y-4 flex flex-col items-center">
-            <Image src={profile.avatar} width={128} height={128} className="rounded-full mx-auto border-2 border-white/10 shadow-lg" alt={profile.name} loading="eager" />
+            <Image src={profile.avatar} width={148} height={148} className="rounded-full mx-auto border-2 border-white/10 shadow-lg" alt={profile.name} loading="lazy" />
 
             <div className="flex flex-col space-y-1">
               <h1 className="text-xl font-bold flex gap-2 items-center mx-auto justify-center leading-none">
@@ -61,8 +68,9 @@ export default function Home() {
             ))}
           </div>
           <hr className="border-gray-800" />
+
           {/* Footer */}
-          <footer className="text-center text-sm font-extralight pb-8">©2026 Copyright Syahreza Satria</footer>
+          <Footer />
         </div>
       </div>
     </main>
